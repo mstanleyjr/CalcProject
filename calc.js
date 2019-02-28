@@ -1,4 +1,4 @@
-
+//Added to git? 
 function displayResults(event){
   var pp = document.getElementById('perPersonCost').value;
   var count = document.getElementById('count').value;
