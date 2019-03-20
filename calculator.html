@@ -4,15 +4,21 @@
   <head>
     <meta charset="utf-8">
     <title>Discount Calculator</title>
+    <link rel="stylesheet" type="text/css" href="calcStyle.css">
   </head>
   <body>
     <h1> Discount Calculator</h1>
       <form>
-        Price per Person:<br>
-        <input type="number" id="perPersonCost"><br>
+        <fieldset>
+          <h3> Client Calculator</h3>
+        Total Price: <br \>
+        <input type="number" id="totalCost"><br />
+        Total Guest Count:<br>
+        <input type="number" id="totalGC"><br>
         Head / Item Count: <br>
         <input type="number" id="count">
         <input type="submit" id="calculate">
+      </fieldset>
     </form>
     <div id="results"></div>
     <script src="calc.js"></script>
