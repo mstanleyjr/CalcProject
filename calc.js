@@ -1,5 +1,6 @@
-//Added to git?
+
 function displayResults(event){
+  //Erases old table
   var parent = document.getElementById("results");
   while(parent.firstChild)
   {
@@ -12,6 +13,7 @@ function displayResults(event){
   var addition = document.getElementById('results');
   var totalPrice = document.getElementById('totalCost').value;
 
+  //Creates table header
   addition.appendChild(document.createElement("table"));
   var percentHeader = document.createElement("th");
   percentHeader.textContent = "Discount %";
@@ -26,9 +28,20 @@ function displayResults(event){
     {
       i = 0;
     }
+    if(i == 20)
+    {
+      i = 15;
+    }
+    if(i == 25)
+    {
+      i = 20;
+    }
   }
 
 event.preventDefault();
+
+
+  //Calculate and creates the table
   function calculateDiscount(){
     var newRow = document.createElement("tr");
     var dVal = document.createElement("td");
@@ -45,6 +58,14 @@ event.preventDefault();
       {
         j = 0;
       }
+      if(j == 20)
+      {
+        j = 15;
+      }
+      if(j == 25)
+      {
+        j = 20;
+      }
     }
     addition.appendChild(newRow);
     var newPrice = document.createElement("tr");
@@ -60,6 +81,14 @@ event.preventDefault();
       if(j == 5)
       {
         j = 0;
+      }
+      if(j == 20)
+      {
+        j = 15;
+      }
+      if(j == 25)
+      {
+        j = 20;
       }
     }
     addition.appendChild(newPrice);
